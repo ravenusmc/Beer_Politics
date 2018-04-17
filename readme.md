@@ -3,6 +3,8 @@
 
 As I start to turn my focus back to React, I decided to work on a project that would be somewhat fun. This project will take data about craft breweries and see what it tells me about politics. For example, is their a correlation between the number of craft breweries in a state and who that state voted for? This is what I will try and examine in this project. I will say that I got some of the idea for this project after reading both Hillbilly Elegy by J.D. Vance as well as Coming Apart by Charles Murray. By mententioning Charles Murray I'm not saying that I support his views. However, he does point out in his book that you can almost predict people and their values / politics by looking at the beer that they drink. 
 
+As usual, I got the data set off of Kaggle and it may be found at this link: https://www.kaggle.com/nickhould/craft-cans/data
+
 
 
 # Getting started
