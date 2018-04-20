@@ -2,3 +2,10 @@
 The CSS in this file will be for the landing page
 ***************/
 
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+}
