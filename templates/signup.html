@@ -1,13 +1,21 @@
 {% extends 'base.html' %}
 
 {% block body %}
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/landing.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/forms.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/generic.css') }}">
 
-<form>
+<section>
 
+  <form method='POST'>
 
-</form>
+    <input placeholder='Username' name='username'>
+    <input class='sign_up_login' placeholder='Password' type='password' name='password'>
+    <input class='sign_up_login' placeholder='Retype Password' type='password' name='password2'>
+    <button class='initial_btn'>Submit</button>
+
+  </form>
+
+</section>
 
 
 
