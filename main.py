@@ -10,6 +10,11 @@ app = Flask(__name__)
 def landing():
     return render_template('index.html')
 
+#This route takes the user to the sign up page
+@app.route('/signup')
+def signup():
+    return render_template('signup.html')
+
 
 
 # set the secret key. keep this really secret:

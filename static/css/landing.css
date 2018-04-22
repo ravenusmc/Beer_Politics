@@ -2,6 +2,38 @@
 The CSS in this file will be for the landing page
 ***************/
 
+/***************
+CSS for the button
+***************/
+
+.login {
+  background-color: #66faff;
+  border-color: #66faff;
+  color: #ff6b66;
+}
+
+.signup {
+  background-color: #ff6b66;
+  border-color: #ff6b66;
+  color: #66faff;
+}
+
+.login:hover {
+  background-color: #66ffb8;
+  border-color: #66ffb8;
+}
+
+.signup:hover {
+  background-color: #66ffb8;
+  border-color: #66ffb8;
+  color: #ff6b66;
+}
+
+
+/***************
+CSS for the page
+***************/
+
 header {
   background-image: url(../img/combined.jpg);
   background-repeat: no-repeat;
