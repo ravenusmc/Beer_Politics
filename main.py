@@ -11,8 +11,15 @@ def landing():
     return render_template('index.html')
 
 #This route takes the user to the sign up page
-@app.route('/signup')
+@app.route('/signup', methods=['GET', 'POST'])
 def signup():
+    if request.method == 'POST':
+        #Pulling data from the form on the signup page
+        username = request.form['username']
+        password = request.form['password']
+        password2 = request.form['password2']
+        if password != password2:
+            flash('Passwords Do Not Match!')
     return render_template('signup.html')
 
 
