@@ -9,15 +9,18 @@
   <form method='POST'>
     <h1 class='heading'>Login</h1>
     <!-- Error messaging -->
-    {% for message in get_flashed_messages() %}
-      <div class="alert alert-danger" role="alert">
-        {{ message }}
-      </div>
-    {% endfor %}
+      {% for message in get_flashed_messages() %}
+        <div class="alert alert-danger" role="alert">
+          {{ message }}
+        </div>
+      {% endfor %}
     <!-- End Error messaging -->
     <input placeholder='Username' name='username'><br>
     <input class='sign_up_login' placeholder='Password' type='password' name='password'><br>
-    <button class='login'>Submit</button>
+    <div class='button_fix'>
+      <button class='login'>Submit</button>&nbsp;&nbsp;&nbsp;&nbsp;
+      <button><a href="/signup">Sign Up</a></button>
+    </div>
   </form>
 
 </section>
