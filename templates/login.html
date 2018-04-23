@@ -7,7 +7,7 @@
 <section>
 
   <form method='POST'>
-    <h1 class='heading'>Sign Up</h1>
+    <h1 class='heading'>Login</h1>
     <!-- Error messaging -->
     {% for message in get_flashed_messages() %}
       <div class="alert alert-danger" role="alert">
@@ -17,7 +17,6 @@
     <!-- End Error messaging -->
     <input placeholder='Username' name='username'><br>
     <input class='sign_up_login' placeholder='Password' type='password' name='password'><br>
-    <input class='sign_up_login' placeholder='Retype Password' type='password' name='password2'><br>
     <button class='login'>Submit</button>
   </form>
 
