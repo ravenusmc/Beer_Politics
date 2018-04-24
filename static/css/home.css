@@ -2,3 +2,35 @@
 The CSS in this file will deal with the home page once the 
 user has signed in.
 ***************/
+
+.main_section {
+  background-image: url(../img/march.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 680px;
+/*  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;*/
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 2em;
+}
+
+.main_section div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+}
+
+.two, .four, .six {
+  background-color: rgba(0,0,0,0.7);
+  color: white;
+  padding: 10px;
+  border-radius: 12px;
+}
