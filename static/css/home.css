@@ -3,7 +3,7 @@ The CSS in this file will deal with the home page once the
 user has signed in.
 ***************/
 
-.main_section {
+.header_section {
   background-image: url(../img/march.jpg);
   background-size: cover;
   background-position: center;
@@ -20,7 +20,7 @@ user has signed in.
   grid-gap: 2em;
 }
 
-.main_section div {
+.header_section div {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,4 +33,26 @@ user has signed in.
   color: white;
   padding: 10px;
   border-radius: 12px;
+}
+
+.main_section {
+  display: grid;
+  grid-template-row: 1fr;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: space-around;
+  grid-gap: 3em;
+  margin: 5%;
+}
+
+.main_section div {
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 5%;
+  padding-right: 5%;
+  border: 2px solid #ff6b66;
+  background-color: #66ffb8;
 }
