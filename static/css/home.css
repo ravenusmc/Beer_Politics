@@ -10,10 +10,6 @@ user has signed in.
   background-repeat: no-repeat;
   background-attachment: fixed;
   height: 680px;
-/*  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;*/
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
@@ -55,4 +51,14 @@ user has signed in.
   padding-right: 5%;
   border: 2px solid #ff6b66;
   background-color: #66ffb8;
+}
+
+.third_section {
+  background-image: url(../img/beer_and_people.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 680px;
+  margin-bottom: 50px;
+  border-bottom: 2px solid black;
 }
