@@ -62,3 +62,42 @@ user has signed in.
   margin-bottom: 50px;
   border-bottom: 2px solid black;
 }
+
+/***************
+Media queries for the home page
+***************/
+
+@media only all and (max-width: 768px) {
+
+  .header_section {
+    background-attachment: scroll;
+    height: 1000px;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-gap: 0.5em;
+  }
+
+  .header_section div {
+    margin: 20px;
+  }
+
+  .two, .four, .six {
+    padding: 3px;
+  }
+
+  .main_section {
+    grid-template-row: 1fr;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: space-around;
+    grid-gap: 0.5em;
+  }
+
+  .main_section div {
+    height: 600px;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+
+}
