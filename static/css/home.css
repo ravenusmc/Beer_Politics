@@ -51,6 +51,7 @@ user has signed in.
   padding-right: 5%;
   border: 2px solid #ff6b66;
   background-color: #66ffb8;
+  border-radius: 12px;
 }
 
 .third_section {

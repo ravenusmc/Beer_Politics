@@ -77,6 +77,36 @@ def home():
     allowed_in = True 
     return render_template('home.html', allowed_in = allowed_in)
 
+#This route will take the user to the data page 
+@app.route('/data')
+def data():
+    if 'username' not in session:
+        return redirect(url_for('signup'))
+    allowed_in = True
+    return render_template('data.html')
+
+
+#This route will take the user to the edit page so that they can edit their profil 
+@app.route('/edit', methods=['GET', 'POST'])
+def edit():
+    if 'username' not in session:
+        return redirect(url_for('signup'))
+    else: 
+        #Pulling the username which I'll use in the database. 
+        username_original = session['username']
+        #This variable will ensure that the navbar is set up for a 
+        #logged in user. 
+        allowed_in = True 
+        #Creating a connection to the database 
+        db = Connection()
+        #Pulling the user information out of the database. 
+        user = db.pull_user_info(username_original)
+        if request.method == 'POST':
+            username = request.form['username']
+            db.update(username_original, username)
+            return redirect(url_for('edit'))
+        return render_template('edit.html', allowed_in = allowed_in, username = username_original)
+
 #This route will sign out the user 
 @app.route('/sign_out')
 def logout():
