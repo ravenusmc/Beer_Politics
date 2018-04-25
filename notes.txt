@@ -1,0 +1,8 @@
+This file simply contains some of the notes for my project. 
+
+Thoughts for hypothesis #1:
+Are states that have more craft breweries more likely to support Hillary Clinton?
+
+-I need to get the number of breweries per state. 
+-I need to get the number percentage of which state voted for Trump/Clinton
+-I need to build a scatter plot with the number of breweries / % who voted for Clinton

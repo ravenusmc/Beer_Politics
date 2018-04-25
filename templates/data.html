@@ -1,7 +1,11 @@
 {% extends 'base.html' %}
 
 {% block body %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/data.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/generic.css') }}">
 
-<h1>Data Page</h1>
+<header>
+  <h1>The Data</h1>
+</header>
 
 {% endblock %}
