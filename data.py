@@ -16,6 +16,9 @@ class Data():
         self.election_data = pd.read_csv('./data/election_data.csv')
         self.breweries = pd.read_csv('./data/breweries.csv')
 
+    
+
+
 
 out = df1.append(df2)
 print(out)

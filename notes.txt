@@ -7,4 +7,4 @@ Are states that have more craft breweries more likely to support Hillary Clinton
 -I need to get the number percentage of which state voted for Trump/Clinton
 -I need to build a scatter plot with the number of breweries / % who voted for Clinton
 
---Probably best to build a Data frame off the two CSV files.
+--Probably best to build a Data frame off the two CSV files then merge it into one dataframe.
