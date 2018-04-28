@@ -11,6 +11,10 @@ import numpy as np
 from nvd3 import scatterChart
 import pandas as pd
 
+
+#The code in this file will work with all of the data in this project. Originally, I was not 
+#planning on building a new csv file but that's what I ended up doing with the get_breweries_by_state
+#method. 
 class Data():
 
     def __init__(self):
@@ -43,49 +47,32 @@ class Data():
                 lower_state = full_state.lower()
                 # #capitalizing the first letter
                 state = lower_state.title()
-
                 #Getting the values for the breweries column
                 #The sole states variable is a DF that only has data for each state. 
                 sole_states = self.breweries[self.breweries['state'] == states[count]] 
                 breweries = sole_states['state'].count()
-
                 #Getting the Clinton percentage of the state 
                 clinton_small_df = self.election_data.iloc[count]
                 clinton_per = clinton_small_df.iloc[2]
-
                 #Getting the Trump percentage of the state 
                 trump_small_df = self.election_data.iloc[count]
                 trump_per = trump_small_df.iloc[1]
-
+                #Getting who won each state. 
                 if clinton_per > trump_per:
                     who_won = 'Clinton'
                 else:
                     who_won = 'Trump'
-
                 #adding the values to the csv file 
                 csv_writer.writerow([state, breweries, clinton_per, trump_per, who_won])
                 #increasing the count by one
                 count += 1 
 
 
-            # for state in states:
-            #     #The sole states variable is a DF that only has data for each state. 
-            #     sole_states = self.breweries[self.breweries['state'] == state]
-            #     #The count variable is getting the count of how many breweries are in each state. 
-            #     count = sole_states['state'].count()
-            #     print(count)
-            #     input()
-
     
 
 obj = Data()
 obj.get_breweries_by_state()
 
-
-#state, breweries, Clinton %, trump % who_won ---> what the CSV will look like
-
-
-#X-axis will be number of breweries, y axis will be the percentage that voted for Clinton
 
 
 
