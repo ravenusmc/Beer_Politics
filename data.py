@@ -32,9 +32,9 @@ class Data():
         'OREGON','PENNSYLVANIA','RHODE ISLAND','SOUTH CAROLINA','SOUTH DAKOTA','TENNESSEE',
         'TEXAS','UTAH','VERMONT','VIRGINIA','WASHINGTON','WEST VIRGINIA','WISCONSIN',
         'WYOMING']
-        with open("beer_politics.csv", "w") as csv_file:
+        with open("./data/beer_politics.csv", "w") as csv_file:
             csv_writer = writer(csv_file)
-            csv_writer.writerow(["state", "breweries", "clinton_per", "trump_per"])
+            csv_writer.writerow(["state", "breweries", "clinton_per", "trump_per", "who_won"])
             count = 0
             while count < len(states):
                 #Getting the value for the state column
@@ -57,10 +57,13 @@ class Data():
                 trump_small_df = self.election_data.iloc[count]
                 trump_per = trump_small_df.iloc[1]
 
-                #trump_per = self.election_data[self.election_data['trump'] == state]
+                if clinton_per > trump_per:
+                    who_won = 'Clinton'
+                else:
+                    who_won = 'Trump'
 
                 #adding the values to the csv file 
-                csv_writer.writerow([state,breweries, clinton_per, trump_per])
+                csv_writer.writerow([state, breweries, clinton_per, trump_per, who_won])
                 #increasing the count by one
                 count += 1 
 
@@ -79,32 +82,10 @@ obj = Data()
 obj.get_breweries_by_state()
 
 
-#state, breweries, Clinton %, trump %  ---> what the CSV will look like
+#state, breweries, Clinton %, trump % who_won ---> what the CSV will look like
 
 
 #X-axis will be number of breweries, y axis will be the percentage that voted for Clinton
 
 
-
-# out = df1.append(df2)
-# print(out)
-
-#    ID  User
-# 0  A1    Fi
-# 1  A2    Ki
-# 0  A4  Fsdi
-# 1  A5  Kisd
-
-# with open('C:/JIRA Excel File/result.csv', 'w', encoding='utf-8') as f:
-#     out.to_csv(f, index=False)
-
-# https://stackoverflow.com/questions/46069709/combining-two-csv-files-using-pandas
-['ALABAMA','ALASKA','ARIZONA','ARKANSAS','CALIFORNIA','COLORADO','CONNECTICUT','DELAWARE',
-'FLORIDA','GEORGIA','HAWAII','IDAHO','ILLINOIS','INDIANA','IOWA','KANSAS','KENTUCKY',
-'LOUISIANA','MAINE','MARYLAND','MASSACHUSETTS','MICHIGAN','MINNESOTA','MISSISSIPPI',
-'MISSOURI','MONTANA','NEBRASKA','NEVADA','NEW HAMPSHIRE','NEW JERSEY',
-'NEW MEXICO','NEW YORK','NORTH CAROLINA','NORTH DAKOTA','OHIO','OKLAHOMA',
-'OREGON','PENNSYLVANIA','RHODE ISLAND','SOUTH CAROLINA','SOUTH DAKOTA','TENNESSEE',
-'TEXAS','UTAH','VERMONT','VIRGINIA','WASHINGTON','WEST VIRGINIA','WISCONSIN',
-'WYOMING']
 
