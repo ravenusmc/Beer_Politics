@@ -26,12 +26,23 @@ class Graph():
         #Turning the data into a columndatasource
         clinton_breweries = ColumnDataSource(data)
 
-        plot =  figure(x_axis_label='Percentage who voted for clinton', y_axis_label='Number of breweries',
+        #This line will be what sets up a color code between which states voted for clinton or trump.
+        color_mapper = CategoricalColorMapper(factors=['Trump', 'Clinton'],
+            palette=['red', 'blue']) 
+
+        plot =  figure(x_axis_label='Percentage who voted for Clinton', y_axis_label='Number of Breweries',
             plot_width=600, plot_height=500, tools='pan,wheel_zoom,box_zoom,reset,hover,save',
-            title='number of breweries versus support for Clinton')
+            title='Number of Breweries versus Support for Clinton')
 
         plot.circle(x='clinton_per', y='breweries', source=clinton_breweries,
-            size=15)
+            size=15, color=dict(field='who_won', transform=color_mapper))
+
+        #setting up the hover tools
+        hover = plot.select_one(HoverTool)
+        hover.tooltips = [('state', '@state'),
+        ('Number of Breweries', '@breweries'),
+        ('Percentage Voted Clinton', '@clinton_per'),
+        ('Percentage Voted Trump', '@trump_per')]
 
         show(plot)
 
