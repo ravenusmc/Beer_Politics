@@ -30,7 +30,7 @@ class Graph():
         color_mapper = CategoricalColorMapper(factors=['Trump', 'Clinton'],
             palette=['red', 'blue']) 
 
-        plot =  figure(x_axis_label='Percentage who voted for Clinton', y_axis_label='Number of Breweries',
+        plot = figure(x_axis_label='Percentage who voted for Clinton', y_axis_label='Number of Breweries',
             plot_width=600, plot_height=500, tools='pan,wheel_zoom,box_zoom,reset,hover,save',
             title='Number of Breweries versus Support for Clinton')
 
@@ -46,8 +46,40 @@ class Graph():
 
         show(plot)
 
+    def build_graph_based_on_google_data(self):
+        #Creating the file where the html will be built to
+        output_file('google_breweries.html')
+        #loading the csv to the file 
+        file = './data/google_beer.csv'
+        #Reading and then storing the csv file as a variable 
+        data = pd.read_csv(file)
+        #Turning the data into a columndatasource
+        google_breweries = ColumnDataSource(data)
+
+        #This line will be what sets up a color code between which states voted for clinton or trump.
+        color_mapper = CategoricalColorMapper(factors=['Trump', 'Clinton'],
+            palette=['red', 'blue']) 
+
+        plot =  figure(x_axis_label='Percentage who voted for Clinton', y_axis_label='Google Trends Percentage of Searching for Craft Brewery',
+        plot_width=600, plot_height=500, tools='pan,wheel_zoom,box_zoom,reset,hover,save',
+        title='Google Percentage (All years) versus Support for Clinton')
+
+        plot.circle(x='clinton_per', y='craft_beer_search', source=google_breweries,
+            size=15, color=dict(field='who_won', transform=color_mapper))
+
+        #setting up the hover tools
+        hover = plot.select_one(HoverTool)
+        hover.tooltips = [('state', '@state'),
+        ('Google Percentage', '@craft_beer_search'),
+        ('Percentage Voted Clinton', '@clinton_per'),
+        ('Percentage Voted Trump', '@trump_per')]
+
+        show(plot)
+
+
 test = Graph()
-test.build_clinton_to_breweries_graph()
+#test.build_clinton_to_breweries_graph()
+test.build_graph_based_on_google_data()
 
 
 
