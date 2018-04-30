@@ -1,6 +1,4 @@
-Category: All categories
-
-Region,craft brewery: (6/1/15 - 11/8/16)
+Region,craft_beer
 Colorado,100
 Virginia,94
 Oregon,87
@@ -30,25 +28,25 @@ Kentucky,25
 Georgia,24
 Tennessee,21
 Louisiana,20
-Vermont,
-District of Columbia,
-Rhode Island,
-Iowa,
-South Dakota,
-Nevada,
-Delaware,
-Montana,
-Nebraska,
-New Mexico,
-Oklahoma,
-Arkansas,
-North Dakota,
-Wyoming,
-Alabama,
-West Virginia,
-Kansas,
-Alaska,
-Idaho,
-Hawaii,
-Utah,
-Mississippi,
+Vermont,0
+District of Columbia,0
+Rhode Island,0
+Iowa,0
+South Dakota,0
+Nevada,0
+Delaware,0
+Montana,0
+Nebraska,0
+New Mexico,0
+Oklahoma,0
+Arkansas,0
+North Dakota,0
+Wyoming,0
+Alabama,0
+West Virginia,0
+Kansas,0
+Alaska,0
+Idaho,0
+Hawaii,0
+Utah,0
+Mississippi,0

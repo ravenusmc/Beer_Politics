@@ -21,6 +21,7 @@ class Data():
         self.election_data = pd.read_csv('./data/election_data.csv')
         self.breweries = pd.read_csv('./data/breweries.csv')
         self.google = pd.read_csv('./data/geoMap.csv')
+        self.google_election = pd.read_csv('./data/trends_2_year.csv')
 
     def get_breweries_by_state(self):
         #This list will be used to get all the breweries by state.
@@ -123,6 +124,38 @@ class Data():
         'OREGON','PENNSYLVANIA','RHODE ISLAND','SOUTH CAROLINA','SOUTH DAKOTA','TENNESSEE',
         'TEXAS','UTAH','VERMONT','VIRGINIA','WASHINGTON','WEST VIRGINIA','WISCONSIN',
         'WYOMING']
+        #Creating the csv file 
+        with open("./data/google_beer_election.csv", "w") as csv_file:
+            csv_writer = writer(csv_file)
+            csv_writer.writerow(["state", "craft_beer_search", "clinton_per", "trump_per", "who_won"])
+            count = 0
+            while count < len(states):
+                #Getting the value for the state column
+                full_state = states[count]
+                #Making the state word all lowercase
+                lower_state = full_state.lower()
+                #capitalizing the first letter
+                state = lower_state.title()
+
+                #Getting the google data 
+                df = self.google_election[self.google_election.Region == state]
+                craft_beer_search = df.iloc[0][1]
+
+                #Getting the Clinton percentage of the state 
+                clinton_small_df = self.election_data.iloc[count]
+                clinton_per = clinton_small_df.iloc[2]
+                #Getting the Trump percentage of the state 
+                trump_small_df = self.election_data.iloc[count]
+                trump_per = trump_small_df.iloc[1]
+                #Getting who won each state. 
+                if clinton_per > trump_per:
+                    who_won = 'Clinton'
+                else:
+                    who_won = 'Trump'
+                #adding the values to the csv file 
+                csv_writer.writerow([state, craft_beer_search, clinton_per, trump_per, who_won])
+                #increasing the count by one
+                count += 1 
 
 
 
@@ -131,7 +164,8 @@ class Data():
     
 
 obj = Data()
-obj.build_csv_google_data()
+#obj.build_csv_google_data()
+obj.build_csv_google_data_election()
 #obj.test()
 
 
