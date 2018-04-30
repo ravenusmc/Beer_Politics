@@ -111,11 +111,18 @@ class Data():
                 #increasing the count by one
                 count += 1 
 
-    # def test(self):
-    #     #print(self.google.head())
-    #     df = self.google[self.google.Region == 'Vermont']
-    #     df = df.iloc[0][1]
-    #     print(df)
+    #What will make this method different from the one above it is that it pulls on Google
+    #trends data during the 2016 Election cycle. Essentially from June 2015 to November 2016
+    def build_csv_google_data_election(self):
+        #This list will be used to get the data by state
+        states = ['ALABAMA','ALASKA','ARIZONA','ARKANSAS','CALIFORNIA','COLORADO','CONNECTICUT','DELAWARE',
+        'FLORIDA','GEORGIA','HAWAII','IDAHO','ILLINOIS','INDIANA','IOWA','KANSAS','KENTUCKY',
+        'LOUISIANA','MAINE','MARYLAND','MASSACHUSETTS','MICHIGAN','MINNESOTA','MISSISSIPPI',
+        'MISSOURI','MONTANA','NEBRASKA','NEVADA','NEW HAMPSHIRE','NEW JERSEY',
+        'NEW MEXICO','NEW YORK','NORTH CAROLINA','NORTH DAKOTA','OHIO','OKLAHOMA',
+        'OREGON','PENNSYLVANIA','RHODE ISLAND','SOUTH CAROLINA','SOUTH DAKOTA','TENNESSEE',
+        'TEXAS','UTAH','VERMONT','VIRGINIA','WASHINGTON','WEST VIRGINIA','WISCONSIN',
+        'WYOMING']
 
 
 
