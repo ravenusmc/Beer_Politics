@@ -172,12 +172,7 @@ class Data():
         #Getting the correlations for hypothesis two B
         clinton_correlation_two_b = self.hypothesis_two_b['craft_beer_search'].corr(self.hypothesis_two_b['clinton_per'])
         trump_correlation_two_b = self.hypothesis_two_b['craft_beer_search'].corr(self.hypothesis_two_b['trump_per'])
-        print(trump_correlation_two_b)
 
-
-
-
-#state, craft_beer_search, clinton_per, trump_per, who_won
     
 
 obj = Data()

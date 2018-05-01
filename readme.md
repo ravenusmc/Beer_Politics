@@ -5,10 +5,10 @@ As I start to turn my focus back to React, I decided to work on a project that w
 
 As usual, I got the data set off of Kaggle and it may be found at this link: https://www.kaggle.com/nickhould/craft-cans/data
 
-Hypothesis Test #1 
+Question #1 
 Are states that have more craft breweries more likely to support Hillary Clinton?
 
-Hypothesis Test #2
+Question #2
 Are states that have more searches for craft breweries, based on google trends, more 
 likely to support Hillary Clinton? 
 
