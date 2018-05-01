@@ -124,8 +124,8 @@ class Graph():
 
 test = Graph()
 #test.build_clinton_to_breweries_graph()
-#test.build_graph_based_on_google_data()
-test.build_graph_google_election_date()
+test.build_graph_based_on_google_data()
+#test.build_graph_google_election_date()
 
 
 

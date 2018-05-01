@@ -22,6 +22,11 @@ class Data():
         self.breweries = pd.read_csv('./data/breweries.csv')
         self.google = pd.read_csv('./data/geoMap.csv')
         self.google_election = pd.read_csv('./data/trends_2_year.csv')
+        self.hypothesis_one = pd.read_csv('./data/beer_politics.csv')
+        #hypothesis two_A deals with google search for all years. 
+        self.hypothesis_two_a = pd.read_csv('./data/google_beer.csv')
+        #hypothesis two_B deals with google search for only the election campaign
+        self.hypothesis_two_b = pd.read_csv('./data/google_beer_election.csv')
 
     def get_breweries_by_state(self):
         #This list will be used to get all the breweries by state.
@@ -157,6 +162,18 @@ class Data():
                 #increasing the count by one
                 count += 1 
 
+    def get_correlations(self):
+        #Correlations for hypothesis one
+        clinton_correlation = self.hypothesis_one['breweries'].corr(self.hypothesis_one['clinton_per'])
+        trump_correlation = self.hypothesis_one['breweries'].corr(self.hypothesis_one['trump_per'])
+        #Getting the correlations for hypothesis two A
+        clinton_correlation_two_a = self.hypothesis_two_a['craft_beer_search'].corr(self.hypothesis_two_a['clinton_per'])
+        trump_correlation_two_a = self.hypothesis_two_a['craft_beer_search'].corr(self.hypothesis_two_a['trump_per'])
+        #Getting the correlations for hypothesis two B
+        clinton_correlation_two_b = self.hypothesis_two_b['craft_beer_search'].corr(self.hypothesis_two_b['clinton_per'])
+        trump_correlation_two_b = self.hypothesis_two_b['craft_beer_search'].corr(self.hypothesis_two_b['trump_per'])
+        print(trump_correlation_two_b)
+
 
 
 
@@ -165,8 +182,9 @@ class Data():
 
 obj = Data()
 #obj.build_csv_google_data()
-obj.build_csv_google_data_election()
+# obj.build_csv_google_data_election()
 #obj.test()
+obj.get_correlations()
 
 
 
