@@ -1,31 +1,31 @@
-state,craft_beer_search,clinton_per,trump_per,who_won
-Arizona,28,45.5,49.0,Trump
-California,45,62.3,31.9,Clinton
-Colorado,100,48.2,43.3,Clinton
-Connecticut,40,54.7,41.0,Clinton
-Florida,38,47.8,49.9,Trump
-Georgia,24,45.9,51.0,Trump
-Illinois,42,56.0,38.9,Clinton
-Indiana,44,37.9,57.2,Trump
-Kentucky,25,32.7,62.5,Trump
-Louisiana,20,38.4,58.1,Trump
-Maine,67,48.0,45.0,Clinton
-Maryland,53,61.3,34.5,Clinton
-Massachusetts,63,61.0,33.3,Clinton
-Michigan,52,47.4,47.6,Trump
-Minnesota,76,46.9,45.3,Clinton
-Missouri,41,38.2,56.9,Trump
-New Hampshire,69,47.6,47.2,Clinton
-New Jersey,40,55.5,41.4,Clinton
-New York,46,59.5,36.8,Clinton
-North Carolina,53,46.8,50.5,Trump
-Ohio,40,43.7,51.8,Trump
-Oregon,87,52.0,40.6,Clinton
-Pennsylvania,57,47.9,48.6,Trump
-South Carolina,40,40.7,54.9,Trump
-Tennessee,21,34.9,61.1,Trump
-Texas,30,43.5,52.5,Trump
-Virginia,94,50.2,44.8,Clinton
-Washington,37,54.3,38.1,Clinton
-Wisconsin,56,47.0,47.8,Trump
+state,craft_beer_search,clinton_per,trump_per,who_won,region
+Arizona,28,45.5,49.0,Trump,south west
+California,45,62.3,31.9,Clinton,west
+Colorado,100,48.2,43.3,Clinton,plains
+Connecticut,40,54.7,41.0,Clinton,north east
+Florida,38,47.8,49.9,Trump,south
+Georgia,24,45.9,51.0,Trump,south
+Illinois,42,56.0,38.9,Clinton,midwest
+Indiana,44,37.9,57.2,Trump,midwest
+Kentucky,25,32.7,62.5,Trump,south
+Louisiana,20,38.4,58.1,Trump,south
+Maine,67,48.0,45.0,Clinton,north east
+Maryland,53,61.3,34.5,Clinton,atlantic
+Massachusetts,63,61.0,33.3,Clinton,north east
+Michigan,52,47.4,47.6,Trump,rest
+Minnesota,76,46.9,45.3,Clinton,rust
+Missouri,41,38.2,56.9,Trump,south
+New Hampshire,69,47.6,47.2,Clinton,north east
+New Jersey,40,55.5,41.4,Clinton,atlantic
+New York,46,59.5,36.8,Clinton,atlantic
+North Carolina,53,46.8,50.5,Trump,south
+Ohio,40,43.7,51.8,Trump,rust
+Oregon,87,52.0,40.6,Clinton,west
+Pennsylvania,57,47.9,48.6,Trump,rust
+South Carolina,40,40.7,54.9,Trump,south
+Tennessee,21,34.9,61.1,Trump,south
+Texas,30,43.5,52.5,Trump,south
+Virginia,94,50.2,44.8,Clinton,south
+Washington,37,54.3,38.1,Clinton,west
+Wisconsin,56,47.0,47.8,Trump,rust
 
