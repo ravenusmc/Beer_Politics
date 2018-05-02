@@ -5,8 +5,10 @@ from flask import Flask, session, jsonify, redirect, url_for, escape, render_tem
 app = Flask(__name__)
 
 #Bringing in files that I created for this project
+from data import *
 from database import * 
 from user import *
+
 
 
 #This route takes the user to the home page
@@ -83,10 +85,12 @@ def data():
     if 'username' not in session:
         return redirect(url_for('signup'))
     allowed_in = True
-    return render_template('data.html')
+    data = Data()
+    correlation_list = data.get_correlations()
+    return render_template('data.html', allowed_in = allowed_in, correlation_list = correlation_list)
 
 
-#This route will take the user to the edit page so that they can edit their profil 
+#This route will take the user to the edit page so that they can edit their profil  
 @app.route('/edit', methods=['GET', 'POST'])
 def edit():
     if 'username' not in session:

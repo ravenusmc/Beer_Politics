@@ -3,11 +3,31 @@
 {% block body %}
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/data.css') }}">
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/generic.css') }}">
+<link rel="stylesheet" href="https://cdn.pydata.org/bokeh/release/bokeh-0.12.6.min.css" type="text/css" />
+<script type="text/javascript" src="https://cdn.pydata.org/bokeh/release/bokeh-0.12.6.min.js"></script>
 
 <header>
   <h1>The Results</h1>
 </header>
 
+<main>
+
+  <section id='one'>
 
 
+    <p>The first question was the following: <span>Are states that have more craft breweries more likely to support Hillary Clinton?</span> The below is the graph that showed the results of that question.</p>
+
+    <div id='fix_graph' class="bk-root">
+      <div class="bk-plotdiv" id="eb33e1a8-feae-48b1-8fc3-35804f6748f9"></div>
+    </div>
+
+    <p>The correlation for this graph is: {{ correlation_list[0] }}</p>
+
+  </section>
+
+
+</main>
+
+
+<script src='{{ url_for('static', filename='js/graph.js') }}'></script>
 {% endblock %}

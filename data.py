@@ -163,15 +163,26 @@ class Data():
                 count += 1 
 
     def get_correlations(self):
+        correlation_list = []
         #Correlations for hypothesis one
-        clinton_correlation = self.hypothesis_one['breweries'].corr(self.hypothesis_one['clinton_per'])
-        trump_correlation = self.hypothesis_one['breweries'].corr(self.hypothesis_one['trump_per'])
+        correlation_list.append(format(self.hypothesis_one['breweries'].corr(self.hypothesis_one['clinton_per']), '.2f'))
+        correlation_list.append(format(self.hypothesis_one['breweries'].corr(self.hypothesis_one['trump_per']), '.2f'))
+        correlation_list.append(format(self.hypothesis_two_a['craft_beer_search'].corr(self.hypothesis_two_a['clinton_per']), '.2f'))
+        correlation_list.append(format(self.hypothesis_two_a['craft_beer_search'].corr(self.hypothesis_two_a['trump_per']), '.2f'))
+        correlation_list.append(format(self.hypothesis_two_b['craft_beer_search'].corr(self.hypothesis_two_b['clinton_per']), '.2f'))
+        correlation_list.append(format(self.hypothesis_two_b['craft_beer_search'].corr(self.hypothesis_two_b['trump_per']), '.2f'))
+    
+
+        return correlation_list
+
+        #clinton_correlation = self.hypothesis_one['breweries'].corr(self.hypothesis_one['clinton_per'])
+        #trump_correlation = self.hypothesis_one['breweries'].corr(self.hypothesis_one['trump_per'])
         #Getting the correlations for hypothesis two A
-        clinton_correlation_two_a = self.hypothesis_two_a['craft_beer_search'].corr(self.hypothesis_two_a['clinton_per'])
-        trump_correlation_two_a = self.hypothesis_two_a['craft_beer_search'].corr(self.hypothesis_two_a['trump_per'])
-        #Getting the correlations for hypothesis two B
-        clinton_correlation_two_b = self.hypothesis_two_b['craft_beer_search'].corr(self.hypothesis_two_b['clinton_per'])
-        trump_correlation_two_b = self.hypothesis_two_b['craft_beer_search'].corr(self.hypothesis_two_b['trump_per'])
+        # clinton_correlation_two_a = self.hypothesis_two_a['craft_beer_search'].corr(self.hypothesis_two_a['clinton_per'])
+        # trump_correlation_two_a = self.hypothesis_two_a['craft_beer_search'].corr(self.hypothesis_two_a['trump_per'])
+        # #Getting the correlations for hypothesis two B
+        # clinton_correlation_two_b = self.hypothesis_two_b['craft_beer_search'].corr(self.hypothesis_two_b['clinton_per'])
+        # trump_correlation_two_b = self.hypothesis_two_b['craft_beer_search'].corr(self.hypothesis_two_b['trump_per'])
 
     
 
