@@ -57,20 +57,20 @@ class Graph():
         google_breweries = ColumnDataSource(data)
 
         #This line will be what sets up a color code between which states voted for clinton or trump.
-        # color_mapper = CategoricalColorMapper(factors=['Trump', 'Clinton'],
-        #     palette=['red', 'blue']) 
-        color_mapper = CategoricalColorMapper(factors=['plains', 'atlantic','north east', 'west', 'south', 'rust', 'midwest'],
-            palette=['red', 'blue', 'black', 'orange', 'green', 'yellow', 'purple']) 
+        color_mapper = CategoricalColorMapper(factors=['Trump', 'Clinton'],
+            palette=['red', 'blue']) 
+        # color_mapper = CategoricalColorMapper(factors=['plains', 'atlantic','north east', 'west', 'south', 'rust', 'midwest'],
+        #     palette=['red', 'blue', 'black', 'orange', 'green', 'yellow', 'purple']) 
 
         plot = figure(x_axis_label='Percentage who voted for Clinton', y_axis_label='Google Trends Percentage of Searching for Craft Brewery',
         plot_width=600, plot_height=500, tools='pan,wheel_zoom,box_zoom,reset,hover,save',
         title='Google Percentage (All years) versus Support for Clinton')
 
-        # plot.circle(x='clinton_per', y='craft_beer_search', source=google_breweries,
-        #     size=15, color=dict(field='who_won', transform=color_mapper))
-
         plot.circle(x='clinton_per', y='craft_beer_search', source=google_breweries,
-            size=15, color=dict(field='region', transform=color_mapper))
+            size=15, color=dict(field='who_won', transform=color_mapper))
+
+        # plot.circle(x='clinton_per', y='craft_beer_search', source=google_breweries,
+        #     size=15, color=dict(field='region', transform=color_mapper))
 
         #setting up the hover tools
         hover = plot.select_one(HoverTool)
@@ -123,8 +123,8 @@ class Graph():
 
 
 test = Graph()
-test.build_clinton_to_breweries_graph()
-#test.build_graph_based_on_google_data()
+#test.build_clinton_to_breweries_graph()
+test.build_graph_based_on_google_data()
 #test.build_graph_google_election_date()
 
 
