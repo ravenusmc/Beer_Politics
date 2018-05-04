@@ -12,6 +12,9 @@ Question #2
 Are states that have more searches for craft breweries, based on google trends, more 
 likely to support Hillary Clinton? 
 
+In the course of this project, I will do my best to answer these questions. But do keep in mind that I'm not a 
+trained Data Scientist. 
+
 
 
 # Getting started
