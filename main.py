@@ -1,4 +1,4 @@
-a#importing outside libraries for use in the project
+#importing outside libraries for use in the project
 from flask import Flask, session, jsonify, redirect, url_for, escape, render_template, request, flash
 
 #Setting up Flask
