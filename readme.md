@@ -40,11 +40,10 @@ Then follow the address, which your console/terminal tells you to go to see the
 website.
 
 # Issues / Other
-
-
+N/A
 
 # Preview
 
-To see a video that talks about this project please go here: COMING SOON
+To see a video that talks about this project please go here: https://www.youtube.com/watch?v=ObUtuRdre7I
 
-Blog entry: COMING SOON
+Blog entry: https://codingsaga.wordpress.com/2018/07/19/beer-and-politics/
